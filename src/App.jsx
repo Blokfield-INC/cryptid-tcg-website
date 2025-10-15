@@ -1,19 +1,15 @@
-import { CryptidSection } from "./components/CryptidSection";
-import { FeaturesSection } from "./components/FeaturesSection";
-import { Header } from "./components/Header";
-import { HeroSection } from "./components/HeroSection";
-import { TypeSection } from "./components/TypeSection";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { AllCryptids } from "./pages/AllCryptids";
 
 function App() {
   return (
-    <>
-      <div class="particles fixed inset-0 z-0" id="particles"></div>
-      <Header />
-      <HeroSection />
-      <FeaturesSection />
-      <TypeSection />
-      <CryptidSection />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/all-cryptids" element={<AllCryptids />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

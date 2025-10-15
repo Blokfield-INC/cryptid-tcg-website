@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const HeaderItem = ({ href, title }) => {
   return (
     <a
@@ -10,11 +12,12 @@ const HeaderItem = ({ href, title }) => {
   );
 };
 
-const HeaderMobileItem = ({ href, title }) => {
+const HeaderMobileItem = ({ href, title, onClick }) => {
   return (
     <a
       href={`#${href}`}
-      class="block hover:text-cyan-400 transition duration-300"
+      onClick={onClick}
+      class="block hover:text-cyan-200 text-cyan-400 text-center p-4 bg-gray-700 rounded-2xl transition duration-300"
     >
       {title}
     </a>
@@ -22,6 +25,7 @@ const HeaderMobileItem = ({ href, title }) => {
 };
 
 export const Header = () => {
+  const [showMobileHeader, setShowMobileHeader] = useState(false);
   return (
     <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-md border-b border-cyan-500">
       <div class="container mx-auto px-6 py-4">
@@ -35,25 +39,57 @@ export const Header = () => {
           <div class="hidden md:flex space-x-8">
             <HeaderItem href="Home" title="Home" />
             <HeaderItem href="Features" title="Features" />
+            <HeaderItem href="Types" title="Types" />
             <HeaderItem href="Cards" title="Cards" />
             <HeaderItem href="Gameplay" title="Gameplay" />
-            <HeaderItem href="Battle" title="Battle" />
+            {/* <HeaderItem href="Battle" title="Battle" /> */}
           </div>
-          <button id="mobile-menu-btn" class="md:hidden text-2xl text-cyan-400">
+          <button
+            id="mobile-menu-btn"
+            onClick={() => setShowMobileHeader((prev) => !prev)}
+            class="md:hidden bg-gray-700 bg-opacity-95 text-cyan-400"
+          >
             <i class="fas fa-bars"></i>
           </button>
         </div>
       </div>
 
-      <div id="mobile-menu" class="md:hidden hidden bg-gray-900 bg-opacity-95">
-        <div class="px-6 py-4 space-y-4">
-          <HeaderMobileItem href="Home" title="Home" />
-          <HeaderMobileItem href="Features" title="Features" />
-          <HeaderMobileItem href="Cards" title="Cards" />
-          <HeaderMobileItem href="Gameplay" title="Gameplay" />
-          <HeaderMobileItem href="Battle" title="Battle" />
+      {showMobileHeader && (
+        <div id="mobile-menu" class="md:hidden bg-gray-900 bg-opacity-95">
+          <div class="px-6 py-4 space-y-3">
+            <HeaderMobileItem
+              onClick={() => setShowMobileHeader(false)}
+              href="Home"
+              title="Home"
+            />
+            <HeaderMobileItem
+              onClick={() => setShowMobileHeader(false)}
+              href="Features"
+              title="Features"
+            />
+            <HeaderMobileItem
+              onClick={() => setShowMobileHeader(false)}
+              href="Types"
+              title="Types"
+            />
+            <HeaderMobileItem
+              onClick={() => setShowMobileHeader(false)}
+              href="Cards"
+              title="Cards"
+            />
+            <HeaderMobileItem
+              onClick={() => setShowMobileHeader(false)}
+              href="Gameplay"
+              title="Gameplay"
+            />
+            {/* <HeaderMobileItem
+              onClick={() => setShowMobileHeader(false)}
+              href="Battle"
+              title="Battle"
+            /> */}
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
