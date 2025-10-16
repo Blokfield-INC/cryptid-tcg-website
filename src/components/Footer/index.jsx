@@ -13,32 +13,36 @@ export const Footer = () => {
             © 2024 Cryptid TCG. All rights reserved. Enter the arena and become
             a legend.
           </p>
-          {/* <div class="flex justify-center space-x-8 mb-8">
+          <div class="flex justify-center space-x-5 mb-8">
             <a
-              href="#"
+              target="_blank"
+              href="https://t.me/cryptohunterm2p"
               class="text-gray-400 hover:text-cyan-400 transition duration-300 text-2xl"
             >
-              <i class="fab fa-discord"></i>
+              <i class="fab fa-telegram"></i>
             </a>
             <a
+              target="_blank"
+              href="https://x.com/CryptoHunter_W"
+              class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            {/*<a
               href="#"
               class="text-gray-400 hover:text-purple-400 transition duration-300 text-2xl"
             >
               <i class="fab fa-twitch"></i>
             </a>
-            <a
-              href="#"
-              class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
+            
             <a
               href="#"
               class="text-gray-400 hover:text-red-400 transition duration-300 text-2xl"
             >
               <i class="fab fa-youtube"></i>
-            </a>
-          </div> */}
+            </a>*/}
+          </div>
           <div class="text-cyan-400 orbitron">
             GAME ON • BATTLE READY • LEGEND AWAITS
           </div>

@@ -96,7 +96,7 @@ export const HeroSection = () => {
             </a>
             <a
               target="_blank"
-              href="https://cryptidtcg.com/"
+              href="https://t.me/cryptohunterm2p"
               class="battle-ready hover:text-white cursor-pointer text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 px-10 py-5 rounded-full text-xl font-bold orbitron transition duration-300 shadow-2xl card-glow border border-purple-400"
             >
               <i class="fas fa-plus mr-3"></i>Join Community
