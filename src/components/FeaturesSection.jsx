@@ -1,3 +1,10 @@
+import DECK from "../assets/deck.png";
+import PVP from "../assets/pvp.png";
+import MYTHICAL from "../assets/mythical_cryptids.png";
+import EVOLVE from "../assets/evolve.png";
+import REWARDS from "../assets/rewards.png";
+import BATTLE from "../assets/battle.png";
+
 export const FeaturesSection = () => {
   return (
     <section id="Features" class="py-20 bg-gray-900 relative">
@@ -16,8 +23,8 @@ export const FeaturesSection = () => {
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="gaming-card rounded-2xl p-8 battle-ready hologram">
-            <div class="text-5xl mb-6 text-cyan-400">
-              <i class="fas fa-dragon"></i>
+            <div class="text-5xl mb-3 text-pink-400">
+              <img src={BATTLE} style={{ height: 80 }} />
             </div>
             <h3 class="orbitron text-2xl font-bold mb-4 text-cyan-400">
               Skill-Based Battles
@@ -33,8 +40,8 @@ export const FeaturesSection = () => {
           </div>
 
           <div class="gaming-card rounded-2xl p-8 battle-ready hologram">
-            <div class="text-5xl mb-6 text-purple-400">
-              <i class="fas fa-brain"></i>
+            <div class="text-5xl mb-3 text-pink-400">
+              <img src={EVOLVE} style={{ height: 80 }} />
             </div>
             <h3 class="orbitron text-2xl font-bold mb-4 text-purple-400">
               Evolving Cards
@@ -50,8 +57,8 @@ export const FeaturesSection = () => {
           </div>
 
           <div class="gaming-card rounded-2xl p-8 battle-ready hologram">
-            <div class="text-5xl mb-6 text-pink-400">
-              <i class="fas fa-globe"></i>
+            <div class="text-5xl mb-3 text-pink-400">
+              <img src={MYTHICAL} style={{ height: 80 }} />
             </div>
             <h3 class="orbitron text-2xl font-bold mb-4 text-pink-400">
               Mythical Cryptids
@@ -69,8 +76,8 @@ export const FeaturesSection = () => {
           </div>
 
           <div class="gaming-card rounded-2xl p-8 battle-ready hologram">
-            <div class="text-5xl mb-6 text-green-400">
-              <i class="fas fa-dna"></i>
+            <div class="text-5xl mb-3 text-green-400">
+              <img src={PVP} style={{ height: 80 }} />
             </div>
             <h3 class="orbitron text-2xl font-bold mb-4 text-green-400">
               Competitive PvP Mode
@@ -84,8 +91,8 @@ export const FeaturesSection = () => {
           </div>
 
           <div class="gaming-card rounded-2xl p-8 battle-ready hologram">
-            <div class="text-5xl mb-6 text-yellow-400">
-              <i class="fas fa-trophy"></i>
+            <div class="text-5xl mb-3 text-yellow-400">
+              <img src={DECK} style={{ height: 80 }} />
             </div>
             <h3 class="orbitron text-2xl font-bold mb-4 text-yellow-400">
               Deck Customization
@@ -101,8 +108,8 @@ export const FeaturesSection = () => {
           </div>
 
           <div class="gaming-card rounded-2xl p-8 battle-ready hologram">
-            <div class="text-5xl mb-6 text-red-400">
-              <i class="fas fa-vr-cardboard"></i>
+            <div class="text-5xl mb-3 text-pink-400">
+              <img src={REWARDS} style={{ height: 80 }} />
             </div>
             <h3 class="orbitron text-2xl font-bold mb-4 text-red-400">
               Tournaments & Rewards

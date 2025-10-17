@@ -1,16 +1,15 @@
+import LOGO from "../../assets/logo.png";
+
 export const Footer = () => {
   return (
     <footer class="bg-black py-12 border-t border-cyan-500">
       <div class="container mx-auto px-6">
         <div class="text-center">
-          <div class="orbitron text-4xl font-bold mb-6 neon-glow">
-            <i class="fas fa-gem mr-2 text-cyan-400"></i>
-            <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Cryptid TCG
-            </span>
+          <div class="orbitron text-4xl font-bold mb-6 neon-glow flex justify-center">
+            <img src={LOGO} width={300} />
           </div>
           <p class="text-gray-400 mb-8 text-lg">
-            © 2024 Cryptid TCG. All rights reserved. Enter the arena and become
+            © 2025 Cryptid TCG. All rights reserved. Enter the arena and become
             a legend.
           </p>
           <div class="flex justify-center space-x-5 mb-8">
