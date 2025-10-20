@@ -109,4 +109,7 @@ export const cryptids = [
   {
     img: "/assets/images/cards/full/G171_5.png",
   },
+  {
+    img: "/assets/images/cards/full/G210_3.png",
+  },
 ];
