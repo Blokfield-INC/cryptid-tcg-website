@@ -32,10 +32,6 @@ export const Header = () => {
       <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
           <div class="orbitron text-2xl font-bold neon-glow flex items-center">
-            {/* <i class="fas fa-gem mr-2 text-cyan-400"></i>
-            <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Cryptid TCG
-            </span> */}
             <img src={LOGO} width={170} />
           </div>
           <div class="hidden md:flex space-x-8">
