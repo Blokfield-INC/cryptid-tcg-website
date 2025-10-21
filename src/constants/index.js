@@ -80,36 +80,87 @@ export const types = [
 
 export const cryptids = [
   {
-    img: "/assets/images/cards/full/G001_1.png",
+    img: "/assets/images/cards/full/G195_3.png",
   },
   {
-    img: "/assets/images/cards/full/G033_1.png",
+    img: "/assets/images/cards/full/G196_3.png",
   },
   {
-    img: "/assets/images/cards/full/G052_1.png",
+    img: "/assets/images/cards/full/G197_3.png",
   },
   {
-    img: "/assets/images/cards/full/G088_1.png",
+    img: "/assets/images/cards/full/G198_3.png",
   },
   {
-    img: "/assets/images/cards/full/G107_1.png",
+    img: "/assets/images/cards/full/G199_3.png",
   },
   {
-    img: "/assets/images/cards/full/G130_1.png",
+    img: "/assets/images/cards/full/G200_3.png",
   },
   {
-    img: "/assets/images/cards/full/G155_1.png",
+    img: "/assets/images/cards/full/G201_3.png",
   },
   {
-    img: "/assets/images/cards/full/G163_1.png",
+    img: "/assets/images/cards/full/G202_3.png",
   },
   {
-    img: "/assets/images/cards/full/G168_1.png",
+    img: "/assets/images/cards/full/G203_3.png",
   },
   {
-    img: "/assets/images/cards/full/G171_5.png",
+    img: "/assets/images/cards/full/G204_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G205_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G206_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G207_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G208_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G209_3.png",
   },
   {
     img: "/assets/images/cards/full/G210_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G211_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G212_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G213_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G214_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G215_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G216_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G217_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G218_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G219_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G220_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G221_3.png",
+  },
+  {
+    img: "/assets/images/cards/full/G222_3.png",
   },
 ];
