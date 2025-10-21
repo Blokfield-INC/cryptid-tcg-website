@@ -1,3 +1,7 @@
+import DECK1 from "../assets/deck1.png";
+import BATTLE1 from "../assets/battle1.png";
+import WALLET from "../assets/wallet.png";
+
 export const GameSection = () => {
   return (
     <section id="Gameplay" class="py-20 bg-gray-900 relative">
@@ -18,7 +22,7 @@ export const GameSection = () => {
           <div class="gaming-card rounded-2xl p-8 battle-ready">
             <div class="text-center mb-6">
               <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="fas fa-bolt text-3xl text-white"></i>
+                <img src={DECK1} style={{ height: 40 }} />
               </div>
               <h3 class="orbitron text-xl font-bold text-yellow-400">
                 DECK CREATION
@@ -40,7 +44,7 @@ export const GameSection = () => {
           <div class="gaming-card rounded-2xl p-8 battle-ready">
             <div class="text-center mb-6">
               <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="fas fa-magic text-3xl text-white"></i>
+                <img src={BATTLE1} style={{ height: 40 }} />
               </div>
               <h3 class="orbitron text-xl font-bold text-purple-400">
                 BATTLE SYSTEM
@@ -61,14 +65,16 @@ export const GameSection = () => {
           <div class="gaming-card rounded-2xl p-8 battle-ready">
             <div class="text-center mb-6">
               <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="fas fa-shield-alt text-3xl text-white"></i>
+                <img src={WALLET} style={{ height: 40 }} />
               </div>
               <h3 class="orbitron text-xl font-bold text-green-400">
                 WALLET SYSTEM
               </h3>
             </div>
             <p class="text-gray-300 text-center mb-4">
-              Learn how to manage your wallet.
+              Own, trade, and secure your assets on BNB Smart Chain. Manage your
+              in-game tokens and collectibles with full transparency and
+              on-chain protection. Shield Status: 100% Secure
             </p>
             <div class="text-center">
               <span class="text-green-400 orbitron text-sm">SHIELD: 100%</span>

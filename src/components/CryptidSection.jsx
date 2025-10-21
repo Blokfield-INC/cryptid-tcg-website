@@ -3,7 +3,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import styled from "styled-components";
 import { cryptids, getAssetUrl } from "../constants";
 import { useNavigate } from "react-router-dom";
-import { CardAnimation } from "@lasbe/react-card-animation";
 
 const Container = styled.div`
   width: 100%;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { types } from "../constants";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -38,14 +39,19 @@ const EmblaSlide = styled.div`
 `;
 
 const Type = ({ name, icon, description, color }) => {
+  const navigate = useNavigate();
   return (
     <EmblaSlide
+      onClick={() => {
+        navigate("/cryptids", { state: { type: name } });
+      }}
       className="p-6 rounded-2xl gaming-card -translate-z-8 rotate-x-50 rotate-z-45"
       // className="gaming-card rounded-2xl p-6 battle-ready group overflow-hidden relative"
     >
       <div className="absolute inset-0 hologram opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       <div className="relative z-10">
         <div
+          onClick={() => console.log("ğşğşğşğ")}
           style={{ backgroundColor: color }}
           className="h-64 bg-gradient-to-br from-[#0b8d9c99]  rounded-xl mb-4 flex items-center justify-center relative overflow-hidden"
         >
@@ -59,7 +65,7 @@ const Type = ({ name, icon, description, color }) => {
         </div>
         <h3 className="orbitron text-xl font-bold mb-2 text-red-400">{name}</h3>
         <p className="text-gray-300 text-sm mb-4">{description}</p>
-        <div className="flex justify-between items-center mb-3">
+        {/* <div className="flex justify-between items-center mb-3">
           <div className="flex items-center space-x-1">
             <span className="text-yellow-400">⚡</span>
             <span className="text-yellow-400 font-bold orbitron">12</span>
@@ -72,7 +78,7 @@ const Type = ({ name, icon, description, color }) => {
             <span className="text-blue-400">🛡️</span>
             <span className="text-blue-400 font-bold orbitron">8</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </EmblaSlide>
   );

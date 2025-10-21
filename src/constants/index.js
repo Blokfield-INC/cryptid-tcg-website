@@ -19,61 +19,61 @@ export const types = [
   {
     name: "Dark",
     icon: Dark,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Disrupts foes with poison and control.",
     color: "#0B092D",
   },
   {
     name: "Dragon",
     icon: Dragon,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Immense power at higher energy cost.",
     color: "#8D1F1C",
   },
   {
     name: "Electric",
     icon: Electric,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Strikes fast with accelerated energy.",
     color: "#CFBF2D",
   },
   {
     name: "Fight",
     icon: Fight,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Trades up with efficient blows, conditional boosts.",
     color: "#751B23",
   },
   {
     name: "Flame",
     icon: Flame,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Unleashes explosive one-hit power.",
     color: "#ED7249",
   },
   {
     name: "Grass",
     icon: Grass,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Sustains through healing and endurance.",
     color: "#B3DF82",
   },
   {
     name: "Iron",
     icon: Iron,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Endures with defense and resilience.",
     color: "#8C7E77",
   },
   {
     name: "Normal",
     icon: Normal,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Versatile energy for any strategy.",
     color: "#FFFFFF",
   },
   {
     name: "Psychic",
     icon: Psychic,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Controls battles with mind and effects.",
     color: "#7A398B",
   },
   {
     name: "Water",
     icon: Water,
-    description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    description: "Controls tempo with flexible switching, sustain.",
     color: "#4B7CB1",
   },
 ];
@@ -108,5 +108,8 @@ export const cryptids = [
   },
   {
     img: "/assets/images/cards/full/G171_5.png",
+  },
+  {
+    img: "/assets/images/cards/full/G210_3.png",
   },
 ];
