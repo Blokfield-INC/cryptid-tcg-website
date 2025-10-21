@@ -1,4 +1,5 @@
 import LOGO from "../../assets/logo.png";
+import bnbChainDapp from "../../assets/bnb-chain-dapp.png";
 
 export const Footer = () => {
   return (
@@ -26,6 +27,26 @@ export const Footer = () => {
               class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl"
             >
               <i class="fab fa-twitter"></i>
+            </a>
+
+            <a
+              target="_blank"
+              href="https://cryptohunters-organization.gitbook.io/cryptid-tcg"
+              class="text-gray-400 hover:text-blue-400  flex items-center transition duration-300 text-2xl"
+            >
+              <img
+                className="grayscale hover:grayscale-[0px]"
+                src={bnbChainDapp}
+                width={25}
+              />
+            </a>
+
+            <a
+              target="_blank"
+              href="https://dappbay.bnbchain.org/detail/cryptid-tcg"
+              class="text-gray-400 hover:text-green-400 transition duration-300 text-2xl"
+            >
+              <i class="fa-solid fa-file"></i>
             </a>
 
             {/*<a

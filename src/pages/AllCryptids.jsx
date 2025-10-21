@@ -13,7 +13,7 @@ const cardType = [
   { value: "Cryptid", type: "cardType" },
   { value: "Hunter", type: "cardType" },
   { value: "Item", type: "cardType" },
-  { value: "Item Tool", type: "cardType" },
+  { value: "Item-Tool", type: "cardType" },
 ];
 
 const type = [

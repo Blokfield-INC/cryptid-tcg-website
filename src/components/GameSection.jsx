@@ -76,9 +76,6 @@ export const GameSection = () => {
               in-game tokens and collectibles with full transparency and
               on-chain protection. Shield Status: 100% Secure
             </p>
-            <div class="text-center">
-              <span class="text-green-400 orbitron text-sm">SHIELD: 100%</span>
-            </div>
           </div>
         </div>
       </div>
