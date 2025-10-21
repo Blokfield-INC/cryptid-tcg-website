@@ -20,10 +20,7 @@ export const Cryptids = () => {
         setLoading(true);
         const res = await fetch(`${url}/cards`);
         const data = await res.json();
-        allCards.current = data.filter(
-          (item, index, self) =>
-            index === self.findIndex((t) => t.name === item.name)
-        );
+        allCards.current = data;
         setCards(allCards.current.filter((c) => state?.type == c?.cryptidType));
       } catch (e) {
         console.error("Error fetching cards:", e);
@@ -52,9 +49,9 @@ export const Cryptids = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 grid-cols-2 gap-8">
           {cards?.map((item, i) => (
             <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
+              initial={{ opacity: 0, scale: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: i * 0.04 }}
+              transition={{ delay: i * 0.01 }}
             >
               <CardAnimation>
                 <img src={getAssetUrl(item?.imageFull)} />
