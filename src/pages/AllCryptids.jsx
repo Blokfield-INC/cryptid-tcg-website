@@ -258,11 +258,12 @@ export const AllCryptids = () => {
     <div className="p-8">
       <div className="mb-8 flex justify-between flex-wrap gap-3">
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/")}
           className="w-[50px] h-[50px] p-0 flex items-center justify-center rounded-full"
           style={{ backgroundColor: "rgb(45, 45, 68)" }}
         >
-          <img src={BackIcon} style={{ width: 20 }} />
+          {/* <img src={BackIcon} style={{ width: 20 }} /> */}
+          <i className="fa fa-home"></i>
         </button>
         <div
           className="flex gap-5 w-full md:w-[450px] h-[50px]"
