@@ -31,7 +31,7 @@ export const Footer = () => {
 
             <a
               target="_blank"
-              href="https://cryptohunters-organization.gitbook.io/cryptid-tcg"
+              href="https://dappbay.bnbchain.org/detail/cryptid-tcg"
               class="text-gray-400 hover:text-blue-400  flex items-center transition duration-300 text-2xl"
             >
               <img
@@ -43,7 +43,7 @@ export const Footer = () => {
 
             <a
               target="_blank"
-              href="https://dappbay.bnbchain.org/detail/cryptid-tcg"
+              href="https://cryptohunters-organization.gitbook.io/cryptid-tcg"
               class="text-gray-400 hover:text-green-400 transition duration-300 text-2xl"
             >
               <i class="fa-solid fa-file"></i>
