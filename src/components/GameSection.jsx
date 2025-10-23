@@ -1,8 +1,10 @@
 import DECK1 from "../assets/deck1.png";
 import BATTLE1 from "../assets/battle1.png";
 import WALLET from "../assets/wallet.png";
+import { useNavigate } from "react-router-dom";
 
 export const GameSection = () => {
+  const navigate = useNavigate();
   return (
     <section id="Gameplay" class="py-20 bg-gray-900 relative">
       <div class="absolute inset-0 cyber-grid opacity-10"></div>
@@ -19,7 +21,10 @@ export const GameSection = () => {
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="gaming-card rounded-2xl p-8 battle-ready">
+          <div
+            class="gaming-card rounded-2xl p-8 battle-ready cursor-pointer"
+            onClick={() => navigate("/how-to-create-deck")}
+          >
             <div class="text-center mb-6">
               <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <img src={DECK1} style={{ height: 40 }} />

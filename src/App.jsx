@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { AllCryptids } from "./pages/AllCryptids";
 import { Cryptids } from "./pages/Cryptids";
+import { HowToCreateDeck } from "./pages/HowToCreateDeck";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/all-cryptids" element={<AllCryptids />} />
         <Route path="/cryptids" element={<Cryptids />} />
+        <Route path="/how-to-create-deck" element={<HowToCreateDeck />} />
       </Routes>
     </BrowserRouter>
   );
