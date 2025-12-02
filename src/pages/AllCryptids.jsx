@@ -8,6 +8,7 @@ import FilterIcon from "../assets/filter.png";
 import { useNavigate } from "react-router-dom";
 import { CardAnimation } from "@lasbe/react-card-animation";
 import { motion, AnimatePresence } from "framer-motion";
+import CardPopup from "./CardPopup";
 
 const cardType = [
   { value: "Cryptid", type: "cardType" },
@@ -49,6 +50,14 @@ const levels = [
 const Filter = ({ onFilter = () => {} }) => {
   const [show, setShow] = useState(false);
   const [filter, setFilter] = useState([]);
+
+  // default filter handler
+  useEffect(() => {
+    onFilter([
+      // levlel 1 by default
+      { value: "Level 1", type: "level" },
+    ]);
+  }, []);
 
   const filterHandler = (v) => {
     if (filter.some((item) => item?.type == v.type && item.value == v.value)) {
@@ -162,7 +171,12 @@ const Filter = ({ onFilter = () => {} }) => {
                       backgroundColor: filter.some(
                         (f) => f?.type == item.type && item.value == f.value
                       )
-                        ? "rgba(72, 72, 186, 1)"
+                        ? // check if level 1 is selected by default
+                          `${
+                            item.value == "Level 1"
+                              ? "rgba(72, 72, 186, 1)"
+                              : "rgba(72, 72, 186, 1)"
+                          }`
                         : "rgb(45, 45, 68)",
                     }}
                   >
@@ -197,6 +211,7 @@ const Filter = ({ onFilter = () => {} }) => {
 };
 
 export const AllCryptids = () => {
+  const [selectedCard, setSelectedCard] = useState(null);
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(false);
   const allCards = useRef([]);
@@ -204,12 +219,17 @@ export const AllCryptids = () => {
   const url = import.meta.env.VITE_PUBLIC_URL;
   useEffect(() => {
     const fetchCards = async () => {
+      console.log("Fetching cards from:", url);
       try {
         setLoading(true);
         const res = await fetch(`${url}/cards`);
         const data = await res.json();
+
         allCards.current = data;
-        setCards(data);
+
+        const filteredData = data.filter((card) => card.level === 1);
+
+        setCards(filteredData);
       } catch (e) {
         console.error("Error fetching cards:", e);
       } finally {
@@ -286,15 +306,25 @@ export const AllCryptids = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7 grid-cols-2 gap-8">
           {cards?.map((item, i) => (
             <motion.div
+              key={i}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: i * 0.01 }}
+              onClick={() => setSelectedCard(item)} // TIKLANINCA POPUP AÇ
+              className="cursor-pointer"
             >
               <CardAnimation>
                 <img src={getAssetUrl(item?.imageFull)} />
               </CardAnimation>
             </motion.div>
           ))}
+
+          {selectedCard && (
+            <CardPopup
+              card={selectedCard}
+              onClose={() => setSelectedCard(null)}
+            />
+          )}
         </div>
       )}
     </div>
