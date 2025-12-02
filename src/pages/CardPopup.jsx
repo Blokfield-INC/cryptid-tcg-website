@@ -18,6 +18,7 @@ import Poison from "../assets/types/Poison.svg";
 import Psychic from "../assets/types/Psychic.svg";
 import Rock from "../assets/types/Rock.svg";
 import Water from "../assets/types/Water.svg";
+import { useState } from "react";
 
 const TypesImgMap = {
   Grass: Grass,
@@ -40,6 +41,45 @@ const TypesImgMap = {
 
 const CardPopup = ({ card, onClose }) => {
   if (!card) return null;
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    const text = `
+${card.name} (${card.cryptidType})
+HP: ${card.hp}
+
+${card.cardType} | ${card.stage} ${
+      card.evolvesFrom ? "| Evolves from " + card.evolvesFrom : ""
+    }
+
+Description:
+${card.description ?? "-"}
+
+Skills:
+${
+  card.skills && card.skills.length > 0
+    ? card.skills
+        .map(
+          (atk) =>
+            `• ${atk.name} (${atk.displayDamage})
+Cost: ${atk.energyCosts.map((c) => `${c.type} x${c.amount}`).join(", ")}
+${atk.description}`
+        )
+        .join("\n\n")
+    : "-"
+}
+
+Weakness: ${card.weakness || "-"}
+Retreat: ${card.retreat || "-"}
+`;
+
+    navigator.clipboard.writeText(text);
+
+    // 🔥 Animasyonlu kopyalandı bildirimi
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500); // 1.5 saniye sonra kaybolur
+  };
 
   console.log("Rendering CardPopup for card:", card);
 
@@ -68,6 +108,32 @@ const CardPopup = ({ card, onClose }) => {
               backgroundImage: `url(${XIcon})`,
             }}
           />
+
+          <button
+            onClick={handleCopy}
+            className="absolute top-2 right-16 flex items-center gap-2 
+             bg-[#f3f3f3] hover:bg-[#e5e5e5] 
+             text-black px-2 py-1 rounded-full shadow 
+             border border-gray-300 transition"
+          >
+            <span className="text-sm">Copy</span>
+            <span className="text-lg">📋</span>
+          </button>
+
+          {/* Copy Notification */}
+          <AnimatePresence>
+            {copied && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute top-3 left-1/2 -translate-x-1/2 
+                 bg-green-500 text-white px-4 py-1 rounded-md shadow-lg text-sm"
+              >
+                Copied!
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* LEFT — Card Image */}
           <div className="w-[45%] flex justify-center items-start">
@@ -124,13 +190,20 @@ const CardPopup = ({ card, onClose }) => {
                             {Array.from({ length: cost.amount }).map((_, n) => (
                               <img
                                 key={n}
-                                src={TypesImgMap[cost.type]}
+                                src={
+                                  TypesImgMap[
+                                    cost.type === "Neutral"
+                                      ? "Normal"
+                                      : cost.type
+                                  ]
+                                }
                                 alt={cost.type}
                                 className="inline w-5 h-5"
                               />
                             ))}
                           </span>
                         ))}
+                        <span className="ml-2">{atk.description ?? "-"}</span>
                       </p>
                     </div>
                     <span className="text-2xl font-bold">
