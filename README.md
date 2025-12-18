@@ -1,16 +1,50 @@
-# React + Vite
+# ⚔️ Cryptid TCG — Web3 Trading Card Battle Game on BNB Smart Chain
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cryptid TCG is a strategic Web3 trading card battle game built on the BNB Smart Chain (BSC Mainnet).  
+Players can collect, upgrade, and trade digital cards — including Cryptid, Hunter, and Item cards — to build unique decks and compete in real-time PvP tournaments.
 
-Currently, two official plugins are available:
+Designed for sustainability, Cryptid TCG distributes 40% of all platform revenue to the player reward pool, creating a transparent and player-driven economy.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌍 Network Information
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Mainnet: BNB Smart Chain (BSC)  
+- Contract Address: [0xDEe049CA06925327EEeA2b1B36Dac5Ae1808A90E](https://bscscan.com/address/0xDEe049CA06925327EEeA2b1B36Dac5Ae1808A90E)  
+- Chain ID: 56  
+- Native Token: BNB  
+- Explorer: [https://bscscan.com](https://bscscan.com)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 Key Features
+
+- 🪙 Built on BNB Chain (BSC Mainnet) for low gas fees and global accessibility.  
+- ⚔️ Strategic PvP Battles: Build decks and challenge players in real-time.  
+- 💰 Player-Centric Economy: 40% of all revenue is distributed to the reward pool.  
+- 🔄 Open Marketplace: Trade cards directly to create real value and ownership.  
+- 🌐 Cross-Chain Ready: Future expansion planned for opBNB and BNB Greenfield ecosystems.
+
+---
+In addition, an **opBNB Airdrop** module is used for low-cost claim proof events (off-chain rewards with on-chain proof).
+
+---
+
+## 🪂 opBNB Airdrop Module (Claim Proof)
+
+To support frequent reward interactions with minimal fees, Cryptid TCG includes an optional **opBNB-based airdrop flow**:
+
+- **Rewards are granted off-chain**
+- **Claims are proven on-chain** via an event-based contract call
+- The backend validates the transaction hash and then finalizes the reward distribution
+
+This design enables:
+- low-cost on-chain activity for visibility/telemetry
+- scalable claim frequency without moving the full economy on-chain
+
+> Note: The airdrop module is independent from the BSC main contract.
+## 🔗 Official Links
+
+- 🌍 Website: [https://cryptidtcg.com](https://cryptidtcg.com)  
+- 📜 Whitepaper: [https://cryptohunters-organization.gitbook.io/cryptid-tcg](https://cryptohunters-organization.gitbook.io/cryptid-tcg)  
+- 🔗 BNB Smart Chain Contract: [View on BscScan](https://bscscan.com/address/0xDEe049CA06925327EEeA2b1B36Dac5Ae1808A90E)
